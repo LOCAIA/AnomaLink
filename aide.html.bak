@@ -15,7 +15,7 @@
                 <li><a href="index.html">Accueil</a></li>
                 <li><a href="documentation.html">Documentation</a></li>
                 <li><a href="signaler.html">Signaler une anomalie</a></li>
-                <li><a href="#">Aide</a></li>
+                <li><a href="aide.html">Aide</a></li>
             </ul>
         </nav>
     </header>
