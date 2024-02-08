@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AnomaLink - Se connecter</title>
+    <link rel="icon" href="C:/Users/leocuttaia/Desktop/HTML/SampleWebsite/A.L-Icon.png">
+    <link rel="stylesheet" href="C:/Users/leocuttaia/Desktop/HTML/SampleWebsite/style.css">
+</head>
+<body>
+    <header>
+        <img src="C:/Users/leocuttaia/Desktop/HTML/SampleWebsite/A.L-Icon.png" alt="Logo AnomaLink">
+        <nav>
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="documentation.html">Documentation</a></li>
+                <li><a href="report_anomaly.html">Signaler une anomalie</a></li>
+                <li><a href="login.html">Se connecter</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section>
+        <h2>Se connecter</h2>
+        <!-- Formulaire de connexion -->
+        <form id="loginForm" onsubmit="return validateLogin()">
+            <label for="username">Nom d'utilisateur :</label><br>
+            <input type="text" id="username" name="username"><br>
+            <label for="password">Mot de passe :</label><br>
+            <input type="password" id="password" name="password"><br><br>
+            <input type="submit" value="Se connecter">
+        </form>
+        <p>Vous n'avez pas de compte ? <a href="javascript:void(0);" onclick="displayErrorMessage()">S'inscrire</a></p>
+        <p id="errorMessage" style="color: red; display: none;">Vous avez besoin d'un compte pour effectuer cette action.</p>
+    </section>
+    <footer>
+        <p>Contactez-nous : contact@anomalink.com</p>
+    </footer>
+
+    <script>
+        function validateLogin() {
+            var username = document.getElementById("username").value;
+            var password = document.getElementById("password").value;
+
+            if (username === "Anomadmin" && password === "HeIsEverywere1234") {
+                window.location.href = "DebugConsole.html";
+                return false;
+            } else {
+                alert("Identifiant ou mot de passe incorrect.");
+                return false;
+            }
+        }
+
+        function displayErrorMessage() {
+            document.getElementById("errorMessage").style.display = "block";
+        }
+    </script>
+</body>
+</html>

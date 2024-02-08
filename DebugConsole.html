@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AnomaLink - Console de débogage</title>
+    <link rel="stylesheet" href="C:/Users/leocuttaia/Desktop/HTML/SampleWebsite/style.css">
+</head>
+<body style="background-color: black; color: white; text-align: left; padding: 20px;">
+    <h2>Bienvenue Anoadmin !</h2>
+    <p>Utilisez les commandes suivantes pour vous déplacer :</p>
+    <ul style="list-style-type: none; padding: 0;">
+        <li>[1] Consultez l'activité des caméras de surveillance du laboratoire</li>
+        <li>[2] En savoir plus sur les sujets</li>
+        <li>[0] Quitter</li>
+    </ul>
+    <form id="commandForm" onsubmit="return executeCommand()">
+        <span style="color: white;">&gt;</span>
+        <input type="text" id="command" name="command" autofocus style="border: none; background-color: black; color: white;">
+    </form>
+    <div id="output" style="margin-top: 20px;"></div>
+
+    <script>
+        function executeCommand() {
+            var commandInput = document.getElementById("command").value;
+
+            switch(commandInput) {
+                case "1":
+					document.getElementById("output").innerText = "Activité des caméras de surveillance :\n" +
+						"01/09/2016 - Sujet 1 et Sujet 2 discutent dans la cour.\n" +
+						"05/09/2016 - Sujet 3 et Sujet 4 jouent à la carte.\n" +
+						"12/09/2016 - Sujet 5 dans sa cellule, il fait des exercices.\n" +
+						"20/09/2016 - Sujet 1 et Sujet 2 se disputent violemment.\n" +
+						"25/09/2016 - Sujet 3 avec un livre, semble lire intensément.\n" +
+						"02/10/2016 - Sujet 1 et Sujet 2 se calment et parlent calmement.\n" +
+						"10/10/2016 - Sujet 4 dessine sur les murs de sa cellule.\n" +
+						"18/10/2016 - Sujet 5 dans sa cellule, il murmure des mots incompréhensibles.\n" +
+						"26/10/2016 - Sujet 3 regarde fixement le mur de sa cellule pendant des heures.\n" +
+						"01/11/2016 - Sujet 1 et Sujet 2 discutent de manière conspiratrice.\n" +
+						"09/11/2016 - Sujet 4 rit seul dans sa cellule.\n" +
+						"17/11/2016 - Sujet 5 dans sa cellule, il semble communiquer avec une entité invisible.\n" +
+						"25/11/2016 - Sujet 3 parle à voix haute, mais il n'y a personne d'autre dans sa cellule.\n" +
+						"03/12/2016 - Sujet 1 et Sujet 2 échangent des objets mystérieux.\n" +
+						"11/12/2016 - Sujet 4 semble hypnotisé, fixant un point invisible dans sa cellule.\n" +
+						"19/12/2016 - Sujet 5 dans sa cellule, il dessine des symboles étranges sur les murs.\n" +
+						"27/12/2016 - Sujet 3 semble parler à quelqu'un qui n'est pas là.\n" +
+						"04/01/2017 - Sujet 1 et Sujet 2 dans une discussion animée, personne ne semble les écouter.\n" +
+						"12/01/2017 - Sujet 4 agit de manière agitée, regardant constamment par-dessus son épaule.\n" +
+						"20/01/2017 - Sujet 5 dans sa cellule, il se tient immobile, fixant le plafond pendant des heures.\n" +
+						"28/01/2017 - Sujet 3 semble converser avec une présence invisible.\n" +
+						"05/02/2017 - Sujet 1 et Sujet 2 semblent conspirer ensemble, chuchotant et regardant autour d'eux avec méfiance.\n" +
+						"13/02/2017 - Sujet 4 parle tout seul, semblant avoir une conversation avec une personne invisible.\n" +
+						"21/02/2017 - Sujet 5 dans sa cellule, il dessine des motifs complexes sur les murs, semblant absorber par la tâche.\n" +
+						"01/03/2017 - Sujet 3 semble agité, regardant frénétiquement autour de lui comme s'il était poursuivi par quelque chose.\n" +
+						"09/03/2017 - Sujet 1 et Sujet 2 discutent à voix basse, leurs regards se tournent souvent vers la porte.\n" +
+						"17/03/2017 - Sujet 4 semble obsédé par quelque chose, inspectant fréquemment son environnement avec suspicion.\n" +
+						"25/03/2017 - Sujet 5 dans sa cellule, il semble entrer dans un état de transe, murmurant des phrases incohérentes.\n" +
+						"02/04/2017 - Sujet 3 regarde fixement un coin de sa cellule, comme s'il était captivé par quelque chose d'invisible.\n" +
+						"10/04/2017 - Sujet 1 et Sujet 2 semblent planifier quelque chose, échangeant des regards furtifs et chuchotant.\n" +
+						"18/04/2017 - Sujet 4 agit de manière erratique, se déplaçant rapidement d'un endroit à l'autre de sa cellule.\n" +
+						"26/04/2017 - Sujet 5 dans sa cellule, il semble se parler à lui-même, ses paroles sont incohérentes.\n" +
+						"04/05/2017 - Sujet 3 semble terrifié, se recroquevillant dans un coin de sa cellule et regardant fixement quelque chose.\n" +
+						"12/05/2017 - Sujet 1 et Sujet 2 ont une violente altercation, nécessitant l'intervention du personnel.\n" +
+						"20/05/2017 - Sujet 4 hurle des obscénités à un point invisible dans sa cellule, paraissant agité et agressif.\n" +
+						"28/05/2017 - Sujet 5 dans sa cellule, il semble en proie à une intense agitation, se balançant d'avant en arrière de manière compulsive.\n" +
+						"05/06/2017 - Sujet 3 est retrouvé en train de murmurer des phrases incompréhensibles en boucle, dans un état catatonique.\n" +
+						"13/06/2017 - Sujet 1 et Sujet 2 se sont réconciliés, semblant coopérer à nouveau.\n" +
+						"21/06/2017 - Sujet 4 semble calme et apaisé, dormant paisiblement dans sa cellule.\n" +
+						"29/06/2017 - Sujet 5 dans sa cellule, il semble avoir des convulsions, ses mouvements sont spasmodiques et incontrôlables.\n" +
+						"07/07/2017 - Sujet 3 parle à voix basse, semblant s'adresser à une entité invisible, ses paroles sont inquiétantes.\n" +
+						"15/07/2017 - Sujet 1 et Sujet 2 sont en désaccord, leurs discussions sont tendues et chargées d'hostilité.\n" +
+						"23/07/2017 - Sujet 4 semble en proie à une intense agitation, marchant frénétiquement de long en large dans sa cellule.\n" +
+						"31/07/2017 - Sujet 5 dans sa cellule, il semble avoir une crise de panique, se tapant la tête contre les murs.\n" +
+						"08/08/2017 - Sujet 3 semble en proie à une crise de folie, riant hystériquement sans raison apparente.\n" +
+						"16/08/2017 - Sujet 1 et Sujet 2 semblent planifier une évasion, chuchotant et regardant fréquemment autour d'eux avec méfiance.\n" +
+						"24/08/2017 - Sujet 4 est retrouvé inconscient dans sa cellule, son état est grave et nécessite une intervention médicale immédiate.\n" +
+						"01/09/2017 - Sujet 5 dans sa cellule, il semble en proie à des hallucinations, réagissant violemment à des stimuli invisibles.\n" +
+						"09/09/2017 - Sujet 3 agit de manière erratique, se jetant contre les murs de sa cellule dans une tentative désespérée de fuir quelque chose.\n" +
+						"17/09/2017 - Sujet 1 et Sujet 2 ont un violent différend, se battant violemment jusqu'à ce que le personnel intervienne pour les séparer.\n" +
+						"25/09/2017 - Sujet 4 semble plongé dans un état de coma profond, ne répondant à aucun stimulus externe.\n" +
+						"03/10/2017 - Sujet 5 dans sa cellule, il semble en proie à des visions terrifiantes, ses cris emplissent le couloir.\n" +
+						"11/10/2017 - Sujet 3 semble communiquer avec une entité invisible, ses gestes sont saccadés et erratiques.\n" +
+						"19/10/2017 - Sujet 1 et Sujet 2 semblent avoir abandonné tout espoir, restant silencieux et résignés dans leur cellule.\n" +
+						"27/10/2017 - Sujet 4 est transféré en urgence à l'infirmerie, son état est critique et sa survie est incertaine.\n" +
+						"04/11/2017 - Sujet 5 dans sa cellule, il semble possédé, ses mouvements sont saccadés et incontrôlables.\n" +
+    "12/11/2017 - Sujet 3 est retrouvé mort dans sa cellule, aucune cause apparente n'est trouvée.\n" +
+    "20/11/2017 - Sujet 1 et Sujet 2 semblent souffrir de paranoïa extrême, s'accusant mutuellement de conspirations et de trahisons.\n" +
+    "28/11/2017 - Sujet 4 semble avoir récupéré, mais son comportement est étrange et imprévisible, il reste isolé dans sa cellule.\n" +
+    "06/12/2017 - Sujet 5 dans sa cellule, il semble être possédé par une force démoniaque, ses cris remplissent le couloir.\n" +
+    "14/12/2017 - Sujet 3 semble hanter sa cellule, des ombres mouvantes sont vues à travers les caméras de surveillance.\n" +
+    "22/12/2017 - Sujet 1 et Sujet 2 sont retrouvés morts dans leur cellule, apparemment victimes d'une lutte violente.\n" +
+    "30/12/2017 - Sujet 4 est retrouvé debout dans un coin de sa cellule, fixant un point invisible, ses yeux sont vides et dépourvus d'expression.\n" +
+    "07/01/2018 - Sujet 5 dans sa cellule, il semble fusionner avec les murs, ses membres se tordant et se déformant de manière inhumaine.\n" +
+    "15/01/2018 - Sujet 3 est retrouvé suspendu au plafond de sa cellule, son corps est couvert de marques étranges et de symboles ésotériques.\n" +
+    "23/01/2018 - Sujet 4 semble parler dans une langue inconnue, ses paroles sont incompréhensibles et déroutantes.\n" +
+    "31/01/2018 - Sujet 5 dans sa cellule, il semble disparaître et réapparaître à volonté, défiant les lois de la physique.\n" +
+    "08/02/2018 - Sujet 3 est retrouvé mutilé dans sa cellule, son corps est méconnaissable et gravement mutilé.\n" +
+    "16/02/2018 - Sujet 4 semble se transformer lentement en une créature inhumaine, ses traits deviennent de plus en plus déformés et monstrueux.\n" +
+    "24/02/2018 - Sujet 5 dans sa cellule, il semble fusionner avec les murs, ses membres se tordant et se déformant de manière inhumaine.\n" +
+    "04/03/2018 - Sujet 3 est retrouvé suspendu au plafond de sa cellule, son corps est couvert de marques étranges et de symboles ésotériques.\n" +
+    "12/03/2018 - Sujet 4 semble parler dans une langue inconnue, ses paroles sont incompréhensibles et déroutantes.\n" +
+    "20/03/2018 - Sujet 5 dans sa cellule, il semble disparaître et réapparaître à volonté, défiant les lois de la physique.\n" +
+    "28/03/2018 - Sujet 3 est retrouvé mutilé dans sa cellule, son corps est méconnaissable et gravement mutilé.\n" +
+    "05/04/2018 - Sujet 4 semble se transformer lentement en une créature inhumaine, ses traits deviennent de plus en plus déformés et monstrueux.\n" +
+    "13/04/2018 - Sujet 5 dans sa cellule, il semble fusionner avec les murs, ses membres se tordant et se déformant de manière inhumaine.\n" +
+    "21/04/2018 - Sujet 3 est retrouvé suspendu au plafond de sa cellule, son corps est couvert de marques étranges et de symboles ésotériques.\n" +
+    "29/04/2018 - Sujet 4 semble parler dans une langue inconnue, ses paroles sont incompréhensibles et déroutantes.\n" +
+    "07/05/2018 - Sujet 5 dans sa cellule, il semble disparaître et réapparaître à volonté, défiant les lois de la physique.\n" +
+    "15/05/2018 - Sujet 3 est retrouvé mutilé dans sa cellule, son corps est méconnaissable et gravement mutilé.\n" +
+    "23/05/2018 - Sujet 4 semble se transformer lentement en une créature inhumaine, ses traits deviennent de plus en plus déformés et monstrueux.\n" +
+    "31/05/2018 - Sujet 5 dans sa cellule, il semble fusionner avec les murs, ses membres se tordant et se déformant de manière inhumaine.\n" +
+    "08/06/2018 - Sujet 3 est retrouvé suspendu au plafond de sa cellule, son corps est couvert de marques étranges et de symboles ésotériques.\n" +
+    "16/06/2018 - Sujet 4 semble parler dans une langue inconnue, ses paroles sont incompréhensibles et déroutantes.\n" +
+    "24/06/2018 - Sujet 5 dans sa cellule, il semble disparaître et réapparaître à volonté, défiant les lois de la physique.\n" +
+    "02/07/2018 - Sujet 3 est retrouvé mutilé dans sa cellule, son corps est méconnaissable et gravement mutilé.\n" +
+    "10/07/2018 - Sujet 4 semble se transformer lentement en une créature inhumaine, ses traits deviennent de plus en plus déformés et monstrueux.\n" +
+    "18/07/2018 - Sujet 5 dans sa cellule, il semble fusionner avec les murs, ses membres se tordant et se déformant de manière inhumaine.\n" +
+    "26/07/2018 - Sujet 3 est retrouvé suspendu au plafond de sa cellule, son corps est couvert de marques étranges et de symboles ésotériques.\n" +
+    "03/08/2018 - Sujet 4 semble parler dans une langue inconnue, ses paroles sont incompréhensibles et déroutantes.\n" +
+    "11/08/2018 - Sujet 5 dans sa cellule, il semble disparaître et réapparaître à volonté, défiant les lois de la physique.\n" +
+    "19/08/2018 - Sujet 2 est retrouvé mort dans sa cellule, son corps est méconnaissable et gravement mutilé.\n" +
+    "27/08/2018 - Sujet 4 semble se transformer lentement en une créature inhumaine, ses traits deviennent de plus en plus déformés et monstrueux.\n" +
+    "04/09/2018 - Sujet 5 dans sa cellule, il semble fusionner avec les murs, ses membres se tordant et se déformant de manière inhumaine.\n" +
+    "12/09/2018 - Sujet 3 est retrouvé suspendu au plafond de sa cellule, son corps est couvert de marques étranges et de symboles ésotériques.\n" +
+    "20/09/2018 - Sujet 4 semble parler dans une langue inconnue, ses paroles sont incompréhensibles et déroutantes.\n" +
+    "28/09/2018 - Sujet 5 dans sa cellule, il semble disparaître et réapparaître à volonté, défiant les lois de la physique.\n" +
+    "06/10/2018 - Sujet 3 est retrouvé mutilé dans sa cellule, son corps est méconnaissable et gravement mutilé.\n" +
+    "14/10/2018 - Sujet 4 semble se transformer lentement en une créature inhumaine, ses traits deviennent de plus en plus déformés et monstrueux.\n" +
+    "22/10/2018 - Sujet 5 dans sa cellule, il semble fusionner avec les murs, ses membres se tordant et se déformant de manière inhumaine.\n" +
+    "30/10/2018 - Sujet 3 est retrouvé suspendu au plafond de sa cellule, son corps est couvert de marques étranges et de symboles ésotériques.\n" +
+	"07/11/2022 - Sujets 1, 3, 4 et 5 sont hors de leurs cellules\n" +
+    "07/11/2022 - Sujet 2 est dans le sol.\n";
+
+					break;
+                case "2":
+                    
+					document.getElementById("output").innerText = "Identité des sujets :" +
+					"Sujet 1 - Nom : John Doe, Raison de la venue : Expérience sur la régénération cellulaire.\n" +
+					"Sujet 2 - Nom : Jane Smith, Raison de la venue : Test sur la télékinésie.\n" +
+					"Sujet 3 - Nom : David Johnson, Raison de la venue : Étude sur la manipulation mentale.\n" +
+					"Sujet 4 - Nom : Emily Brown, Raison de la venue : Observation des effets de l'exposition à des radiations inconnues.\n" +
+					"Sujet 5 - Nom : Michael Wilson, Raison de la venue : Évaluation des capacités de guérison paranormales.\n";
+
+                    break;
+                case "3":
+                    document.getElementById("output").innerText = "Sujet 2 est décédé le: 01/01/2055, à 03:51, par: AnomaLink.\n"
+                    break;
+                case "0":
+                    window.history.back(); // Revenir en arrière
+                    break;
+                default:
+                    document.getElementById("output").innerText = "Commande invalide. Veuillez entrer une commande valide.";
+            }
+
+            // Effacer le texte entré par l'utilisateur
+            document.getElementById("command").value = "";
+
+            // Empêcher le formulaire de se soumettre et de rafraîchir la page
+            return false;
+        }
+    </script>
+</body>
+</html>
+

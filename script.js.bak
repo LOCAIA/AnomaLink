@@ -1,0 +1,42 @@
+// script.js
+
+// Animation pour le titre "AnomaLink c'est quoi ?"
+const title = document.querySelector('section h2');
+title.addEventListener('mouseenter', () => {
+    title.style.transform = 'scale(1.1)';
+    title.style.transition = 'transform 0.3s ease-in-out';
+});
+title.addEventListener('mouseleave', () => {
+    title.style.transform = 'scale(1)';
+});
+
+// Animation de survol sur les liens de navigation
+const navLinks = document.querySelectorAll('nav a');
+navLinks.forEach(link => {
+    link.addEventListener('mouseenter', () => {
+        link.style.color = '#ff4500'; // Changer la couleur au survol
+        link.style.transition = 'color 0.3s ease-in-out'; // Animation de transition
+    });
+    link.addEventListener('mouseleave', () => {
+        link.style.color = '#007bff'; // Revenir à la couleur initiale
+    });
+});
+
+// Effet de changement de couleur sur les paragraphes du contenu principal lorsqu'ils sont cliqués
+const paragraphs = document.querySelectorAll('section p');
+paragraphs.forEach(paragraph => {
+    paragraph.addEventListener('click', () => {
+        const randomColor = getRandomColor();
+        paragraph.style.color = randomColor; // Changer la couleur au clic
+    });
+});
+
+// Fonction pour générer une couleur aléatoire
+function getRandomColor() {
+    const letters = '0123456789ABCDEF';
+    let color = '#';
+    for (let i = 0; i < 6; i++) {
+        color += letters[Math.floor(Math.random() * 16)];
+    }
+    return color;
+}

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AnomaLink - Signaler une anomalie</title>
+    <link rel="icon" href="C:/Users/leocuttaia/Desktop/HTML/SampleWebsite/A.L-Icon.png">
+    <link rel="stylesheet" href="C:/Users/leocuttaia/Desktop/HTML/SampleWebsite/style.css">
+</head>
+<body>
+    <header>
+        <img src="C:/Users/leocuttaia/Desktop/HTML/SampleWebsite/A.L-Icon.png" alt="Logo AnomaLink">
+        <nav>
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="documentation.html">Documentation</a></li>
+                <li><a href="#">Signaler une anomalie</a></li>
+                <li><a href="aide.html">Aide</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section>
+        <h2>Signaler une anomalie</h2>
+        <p>Vous avez besoin d'un compte pour faire cela.</p>
+        <p>Merci de vous connecter ou de vous inscrire pour accéder à cette fonctionnalité.</p>
+    </section>
+    <footer>
+        <p>Contactez-nous : contact@anomalink.com</p>
+    </footer>
+</body>
+</html>
